@@ -20,15 +20,15 @@
     var CONFIG = {"hostname":"nry2025.xyz","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="在使用 Git 的时候，很难记住那些好用但小众的 Git 命令——当你要用到它们的时候，可能已经忘记具体怎么写了。  不用担心，速查表就是为了解决这个问题而存在的。                📝 写这个的原因有时候我也会突然忘记某条命令该怎么用，甚至忘记 Git 还有这个功能！             基础命令1$ git commit 创建一次新的提交可选参数：-m -a -s --ame">
+  <meta name="description" content="在使用 Git 的时候，很难记住那些好用但小众的 Git 命令——当你要用到它们的时候，可能已经忘记具体怎么写了。  不用担心，速查表就是为了解决这个问题而存在的。   基础命令1$ git commit 创建一次新的提交可选参数：-m -a -s --amend 1$ git checkout 创建分支 切换远程分支 切换本地分支可选参数：-b 1$ git remote 用于管理远程仓库的强大">
 <meta property="og:type" content="article">
 <meta property="og:title" content="git 命令速查表">
 <meta property="og:url" content="https://nry2025.xyz/2025/06/27/git-%E5%91%BD%E4%BB%A4%E9%80%9F%E6%9F%A5%E8%A1%A8/index.html">
 <meta property="og:site_name" content="战神小猫">
-<meta property="og:description" content="在使用 Git 的时候，很难记住那些好用但小众的 Git 命令——当你要用到它们的时候，可能已经忘记具体怎么写了。  不用担心，速查表就是为了解决这个问题而存在的。                📝 写这个的原因有时候我也会突然忘记某条命令该怎么用，甚至忘记 Git 还有这个功能！             基础命令1$ git commit 创建一次新的提交可选参数：-m -a -s --ame">
+<meta property="og:description" content="在使用 Git 的时候，很难记住那些好用但小众的 Git 命令——当你要用到它们的时候，可能已经忘记具体怎么写了。  不用担心，速查表就是为了解决这个问题而存在的。   基础命令1$ git commit 创建一次新的提交可选参数：-m -a -s --amend 1$ git checkout 创建分支 切换远程分支 切换本地分支可选参数：-b 1$ git remote 用于管理远程仓库的强大">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2025-06-27T03:56:41.000Z">
-<meta property="article:modified_time" content="2025-06-27T05:34:36.995Z">
+<meta property="article:modified_time" content="2025-07-05T17:13:50.796Z">
 <meta property="article:author" content="战神小猫">
 <meta name="twitter:card" content="summary">
 
@@ -206,10 +206,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2025-06-27 11:56:41 / 修改时间：13:34:36" itemprop="dateCreated datePublished" datetime="2025-06-27T11:56:41+08:00">2025-06-27</time>
+              <time title="创建时间：2025-06-27 11:56:41" itemprop="dateCreated datePublished" datetime="2025-06-27T11:56:41+08:00">2025-06-27</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2025-07-06 01:13:50" itemprop="dateModified" datetime="2025-07-06T01:13:50+08:00">2025-07-06</time>
+              </span>
 
           
 
@@ -225,10 +231,6 @@
         <p>在使用 <strong>Git</strong> 的时候，很难记住那些好用但小众的 <strong>Git 命令</strong>——当你要用到它们的时候，可能已经忘记具体怎么写了。</p>
 <hr>
 <p>不用担心，速查表就是为了解决这个问题而存在的。  </p>
-<div class="note info">
-            <h4 id="📝-写这个的原因"><a href="#📝-写这个的原因" class="headerlink" title="📝 写这个的原因"></a>📝 <strong>写这个的原因</strong></h4><p>有时候我也会突然忘记某条命令该怎么用，甚至忘记 Git 还有这个功能！</p>
-          </div>
-
 <h3 id="基础命令"><a href="#基础命令" class="headerlink" title="基础命令"></a>基础命令</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git commit</span><br></pre></td></tr></table></figure>
 <p>创建一次新的提交<br>可选参数：<code>-m</code> <code>-a</code> <code>-s</code> <code>--amend</code></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git checkout</span><br></pre></td></tr></table></figure>
@@ -272,7 +274,10 @@
     <a href="/2025/06/26/hello-world/" rel="prev" title="Hello World">
       <i class="fa fa-chevron-left"></i> Hello World
     </a></div>
-      <div class="post-nav-item"></div>
+      <div class="post-nav-item">
+    <a href="/2025/07/06/frp/" rel="next" title="frp，是内网穿透中的神器还是内网穿透中的坐便器？">
+      frp，是内网穿透中的神器还是内网穿透中的坐便器？ <i class="fa fa-chevron-right"></i>
+    </a></div>
     </div>
       </footer>
     
@@ -331,7 +336,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#%F0%9F%93%9D-%E5%86%99%E8%BF%99%E4%B8%AA%E7%9A%84%E5%8E%9F%E5%9B%A0"><span class="nav-number">1.</span> <span class="nav-text">📝 写这个的原因</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4"><span class="nav-number"></span> <span class="nav-text">基础命令</span></a></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4"><span class="nav-number">1.</span> <span class="nav-text">基础命令</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -347,7 +352,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">2</span>
+          <span class="site-state-item-count">3</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>

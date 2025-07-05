@@ -1,15 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>frp，是内网穿透中的神器还是内网穿透中的坐便器？</title>
+    <url>/2025/07/06/frp/</url>
+    <content><![CDATA[<h3 id="frp-是什么？"><a href="#frp-是什么？" class="headerlink" title="frp 是什么？"></a>frp 是什么？</h3><p>frp 是一款高性能的反向代理应用，专注于内网穿透。它支持多种协议，包括 TCP、UDP、HTTP、HTTPS 等，并且具备 P2P 通信功能。使用 frp，您可以安全、便捷地将内网服务暴露到公网，通过拥有公网 IP 的节点进行中转，说人话就是使用内网穿透将您服务器上挂载的服务暴露公榜，要做到他您必须需要一个域名以及拥有域名的 frp服务器。</p>
+<h3 id="安装教程"><a href="#安装教程" class="headerlink" title="安装教程"></a>安装教程</h3><p>请参考： <a href="https://gofrp.org/zh-cn/docs/setup/">https://gofrp.org/zh-cn/docs/setup/</a><br>我非常建议您放行几个端口 用于frp服务器，以及frp要暴露的端口。</p>
+<h3 id="示例配置"><a href="#示例配置" class="headerlink" title="示例配置"></a>示例配置</h3><p><strong>frp</strong> 能做的事情有很多，最简单的事例就是将您本地 <strong>ssh</strong> 服务暴露给公网，这样就可以远程主机办公了。</p>
+<figure class="highlight toml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 定义frpc</span></span><br><span class="line"><span class="attr">serverAddr</span> = <span class="string">&quot;x.x.x.x&quot;</span></span><br><span class="line"><span class="attr">serverPort</span> = <span class="number">7000</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># frp端口转发配置</span></span><br><span class="line"><span class="section">[[proxies]]</span></span><br><span class="line"><span class="attr">name</span> = <span class="string">&quot;ssh&quot;</span></span><br><span class="line"><span class="attr">type</span> = <span class="string">&quot;tcp&quot;</span></span><br><span class="line"><span class="attr">localIP</span> = <span class="string">&quot;127.0.0.1&quot;</span></span><br><span class="line"><span class="attr">localPort</span> = <span class="number">22</span></span><br><span class="line"><span class="attr">remotePort</span> = <span class="number">6000</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 其他若干配置</span></span><br></pre></td></tr></table></figure>
+<p>最后再说句happy birthday小猫！</p>
+]]></content>
+  </entry>
+  <entry>
     <title>git 命令速查表</title>
     <url>/2025/06/27/git-%E5%91%BD%E4%BB%A4%E9%80%9F%E6%9F%A5%E8%A1%A8/</url>
     <content><![CDATA[<p>在使用 <strong>Git</strong> 的时候，很难记住那些好用但小众的 <strong>Git 命令</strong>——当你要用到它们的时候，可能已经忘记具体怎么写了。</p>
 <hr>
 <p>不用担心，速查表就是为了解决这个问题而存在的。  </p>
-<div class="note info">
-            <h4 id="📝-写这个的原因"><a href="#📝-写这个的原因" class="headerlink" title="📝 写这个的原因"></a>📝 <strong>写这个的原因</strong></h4><p>有时候我也会突然忘记某条命令该怎么用，甚至忘记 Git 还有这个功能！</p>
-          </div>
-
 <h3 id="基础命令"><a href="#基础命令" class="headerlink" title="基础命令"></a>基础命令</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git commit</span><br></pre></td></tr></table></figure>
 <p>创建一次新的提交<br>可选参数：<code>-m</code> <code>-a</code> <code>-s</code> <code>--amend</code></p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git checkout</span><br></pre></td></tr></table></figure>
