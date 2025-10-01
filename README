@@ -1,0 +1,17 @@
+ZhiZu.io
+========
+
+Website:
+
+    https://ioit-aaa.github.io
+
+To build this documentation, use:
+
+    mkdocs build
+
+Commands for repo owner
+=======================
+
+Push to gh-pages branch:
+
+    mkdocs gh-deploy
