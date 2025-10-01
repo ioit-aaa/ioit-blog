@@ -1,289 +1,578 @@
-<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>战神小猫 - 随便写点东西，看看我一天都在想什么。</title><meta name="author" content="战神小猫"><meta name="copyright" content="战神小猫"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="今天写点什么好呢">
-<meta property="og:type" content="website">
-<meta property="og:title" content="战神小猫">
-<meta property="og:url" content="https://nry2025.xyz/index.html">
-<meta property="og:site_name" content="战神小猫">
-<meta property="og:description" content="今天写点什么好呢">
-<meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/ioit-aaa/picx-images-hosting@master/th-3233555113.7pk8o0zan.jpg">
-<meta property="article:author" content="战神小猫">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/ioit-aaa/picx-images-hosting@master/th-3233555113.7pk8o0zan.jpg"><script type="application/ld+json">{
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "战神小猫",
-  "url": "https://nry2025.xyz/"
-}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://nry2025.xyz/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
-    (() => {
-      
-    const saveToLocal = {
-      set: (key, value, ttl) => {
-        if (!ttl) return
-        const expiry = Date.now() + ttl * 86400000
-        localStorage.setItem(key, JSON.stringify({ value, expiry }))
-      },
-      get: key => {
-        const itemStr = localStorage.getItem(key)
-        if (!itemStr) return undefined
-        const { value, expiry } = JSON.parse(itemStr)
-        if (Date.now() > expiry) {
-          localStorage.removeItem(key)
-          return undefined
-        }
-        return value
-      }
-    }
 
-    window.btf = {
-      saveToLocal,
-      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
-        const script = document.createElement('script')
-        script.src = url
-        script.async = true
-        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
-        script.onload = script.onreadystatechange = () => {
-          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
-        }
-        script.onerror = reject
-        document.head.appendChild(script)
-      }),
-      getCSS: (url, id) => new Promise((resolve, reject) => {
-        const link = document.createElement('link')
-        link.rel = 'stylesheet'
-        link.href = url
-        if (id) link.id = id
-        link.onload = link.onreadystatechange = () => {
-          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
-        }
-        link.onerror = reject
-        document.head.appendChild(link)
-      }),
-      addGlobalFn: (key, fn, name = false, parent = window) => {
-        if (!true && key.startsWith('pjax')) return
-        const globalFn = parent.globalFn || {}
-        globalFn[key] = globalFn[key] || {}
-        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
-        parent.globalFn = globalFn
-      }
-    }
-  
-      
-      const activateDarkMode = () => {
-        document.documentElement.setAttribute('data-theme', 'dark')
-        if (document.querySelector('meta[name="theme-color"]') !== null) {
-          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
-        }
-      }
-      const activateLightMode = () => {
-        document.documentElement.setAttribute('data-theme', 'light')
-        if (document.querySelector('meta[name="theme-color"]') !== null) {
-          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
-        }
-      }
-
-      btf.activateDarkMode = activateDarkMode
-      btf.activateLightMode = activateLightMode
-
-      const theme = saveToLocal.get('theme')
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
     
-          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://mydomain.org/mysite/">
+      
+      
+      
+        <link rel="next" href="blog/">
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.21">
+    
+    
+      
+        <title>Home - ZhiZu.io</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.2a3383ac.min.css">
+      
         
+        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
       
-      const asideStatus = saveToLocal.get('aside-status')
-      if (asideStatus !== undefined) {
-        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
-      }
+      
+
+
+    
     
       
-    const detectApple = () => {
-      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
-        document.documentElement.classList.add('apple')
-      }
-    }
-    detectApple()
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+      
+        <meta  property="og:type"  content="website" >
+      
+        <meta  property="og:title"  content="ZhiZu.io" >
+      
+        <meta  property="og:description"  content="None" >
+      
+        <meta  property="og:image"  content="https://mydomain.org/mysite/assets/images/social/index.png" >
+      
+        <meta  property="og:image:type"  content="image/png" >
+      
+        <meta  property="og:image:width"  content="1200" >
+      
+        <meta  property="og:image:height"  content="630" >
+      
+        <meta  property="og:url"  content="https://mydomain.org/mysite/" >
+      
+        <meta  name="twitter:card"  content="summary_large_image" >
+      
+        <meta  name="twitter:title"  content="ZhiZu.io" >
+      
+        <meta  name="twitter:description"  content="None" >
+      
+        <meta  name="twitter:image"  content="https://mydomain.org/mysite/assets/images/social/index.png" >
+      
+    
+    
+  </head>
   
-    })()
-  </script><script>const GLOBAL_CONFIG = {
-  root: '/',
-  algolia: undefined,
-  localSearch: {"path":"/search.json","preload":false,"top_n_per_article":1,"unescape":false,"languages":{"hits_empty":"未找到符合您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
-  translate: undefined,
-  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
-  copy: {
-    success: '复制成功',
-    error: '复制失败',
-    noSupport: '浏览器不支持'
-  },
-  relativeDate: {
-    homepage: false,
-    post: false
-  },
-  runtime: '',
-  dateSuffix: {
-    just: '刚刚',
-    min: '分钟前',
-    hour: '小时前',
-    day: '天前',
-    month: '个月前'
-  },
-  copyright: undefined,
-  lightbox: 'null',
-  Snackbar: undefined,
-  infinitegrid: {
-    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
-    buttonText: '加载更多'
-  },
-  isPhotoFigcaption: false,
-  islazyloadPlugin: false,
-  isAnchor: false,
-  percent: {
-    toc: true,
-    rightside: false,
-  },
-  autoDarkmode: false
-}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
-  title: '战神小猫',
-  isHighlightShrink: false,
-  isToc: false,
-  pageType: 'home'
-}</script><meta name="generator" content="Hexo 7.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="https://cdn.jsdelivr.net/gh/ioit-aaa/picx-images-hosting@master/th-3233555113.7pk8o0zan.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">3</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-user"></i><span> 关于</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header" style="background-image: url(https://cdn.jsdelivr.net/gh/ioit-aaa/picx-images-hosting@master/ResizedImage_2025-07-10_17-15-15_1902.icelrbnq1.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">战神小猫</span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></span></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-user"></i><span> 关于</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="site-info"><h1 id="site-title">战神小猫</h1><div id="site-subtitle"><span id="subtitle"></span></div><div id="site_social_icons"><a class="social-icon" href="https://github.com/ioit-aaa" target="_blank" title="Github"><i class="fab fa-github" style="color: #ffff;"></i></a></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts nc" id="recent-posts"><div class="recent-post-items"><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2025/07/06/frp/" title="frp，是内网穿透中的神器还是内网穿透中的坐便器？">frp，是内网穿透中的神器还是内网穿透中的坐便器？</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-07-05T17:18:17.000Z" title="发表于 2025-07-06 01:18:17">2025-07-06</time></span></div><div class="content">frp 是什么？frp 是一款高性能的反向代理应用，专注于内网穿透。它支持多种协议，包括 TCP、UDP、HTTP、HTTPS 等，并且具备 P2P 通信功能。使用 frp，您可以安全、便捷地将内网服务暴露到公网，通过拥有公网 IP 的节点进行中转，说人话就是使用内网穿透将您服务器上挂载的服务暴露公榜，要做到他您必须需要一个域名以及拥有域名的 frp服务器。 安装教程请参考： https://gofrp.org/zh-cn/docs/setup/我非常建议您放行几个端口 用于frp服务器，以及frp要暴露的端口。 示例配置frp 能做的事情有很多，最简单的事例就是将您本地 ssh 服务暴露给公网，这样就可以远程主机办公了。 12345678910111213# 定义frpcserverAddr = &quot;x.x.x.x&quot;serverPort = 7000# frp端口转发配置[[proxies]]name = &quot;ssh&quot;type = &quot;tcp&quot;localIP = &quot;127.0.0.1&quot;localPort ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2025/06/27/git-%E5%91%BD%E4%BB%A4%E9%80%9F%E6%9F%A5%E8%A1%A8/" title="git 命令速查表">git 命令速查表</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-06-27T03:56:41.000Z" title="发表于 2025-06-27 11:56:41">2025-06-27</time></span></div><div class="content">在使用 Git 的时候，很难记住那些好用但小众的 Git 命令——当你要用到它们的时候，可能已经忘记具体怎么写了。  不用担心，速查表就是为了解决这个问题而存在的。   基础命令1$ git commit 创建一次新的提交可选参数：-m -a -s --amend 1$ git checkout 创建分支 切换远程分支 切换本地分支可选参数：-b 1$ git remote 用于管理远程仓库的强大命令可选参数：add rename remove  更多命令请参考 Pro Git book </div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2025/06/26/hello-world/" title="Hello World">Hello World</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-06-26T09:42:48.528Z" title="发表于 2025-06-26 17:42:48">2025-06-26</time></span></div><div class="content">Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new &quot;My New Post&quot;  More info: Writing Run server1$ hexo server  More info: Server Generate static files1$ hexo generate  More info: Generating Deploy to remote sites1$ hexo deploy  More info: Deployment </div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="https://cdn.jsdelivr.net/gh/ioit-aaa/picx-images-hosting@master/th-3233555113.7pk8o0zan.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">战神小猫</div><div class="author-info-description">今天写点什么好呢</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">3</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/ioit-aaa"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/ioit-aaa" target="_blank" title="Github"><i class="fab fa-github" style="color: #ffff;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">换了一个主题，希望你们能喜欢。</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/07/06/frp/" title="frp，是内网穿透中的神器还是内网穿透中的坐便器？">frp，是内网穿透中的神器还是内网穿透中的坐便器？</a><time datetime="2025-07-05T17:18:17.000Z" title="发表于 2025-07-06 01:18:17">2025-07-06</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/06/27/git-%E5%91%BD%E4%BB%A4%E9%80%9F%E6%9F%A5%E8%A1%A8/" title="git 命令速查表">git 命令速查表</a><time datetime="2025-06-27T03:56:41.000Z" title="发表于 2025-06-27 11:56:41">2025-06-27</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/06/26/hello-world/" title="Hello World">Hello World</a><time datetime="2025-06-26T09:42:48.528Z" title="发表于 2025-06-26 17:42:48">2025-06-26</time></div></div></div></div><div class="card-widget card-archives">
-    <div class="item-headline">
-      <i class="fas fa-archive"></i>
-      <span>归档</span>
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="teal">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#welcome-to-zhizuio" class="md-skip">
+          Skip to content
+        </a>
       
     </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
   
-    <ul class="card-archive-list">
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="." title="ZhiZu.io" class="md-header__button md-logo" aria-label="ZhiZu.io" data-md-component="logo">
       
-        <li class="card-archive-list-item">
-          <a class="card-archive-list-link" href="/archives/2025/07/">
-            <span class="card-archive-list-date">
-              七月 2025
-            </span>
-            <span class="card-archive-list-count">1</span>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ZhiZu.io
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Home
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
           </a>
-        </li>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
       
-        <li class="card-archive-list-item">
-          <a class="card-archive-list-link" href="/archives/2025/06/">
-            <span class="card-archive-list-date">
-              六月 2025
-            </span>
-            <span class="card-archive-list-count">2</span>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="ZhiZu.io" class="md-nav__button md-logo" aria-label="ZhiZu.io" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    ZhiZu.io
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="." class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Blog
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Blog
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="blog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Blog
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Archive
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Archive
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="blog/archive/2025/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2025
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+  
+
+
+
+
+<h1 id="welcome-to-zhizuio">Welcome to ZhiZu.io</h1>
+<mark class="critic block">
+<p>Since the site has not been created, there are no technical articles. Perhaps you can check our blog first</p>
+<p><a class="md-button" href="blog">Go to <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 7.0.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M384 144c0 97.2-86 176-192 176-26.7 0-52.1-5-75.2-14l-81.6 43.2c-9.3 4.9-20.7 3.2-28.2-4.2s-9.2-18.9-4.2-28.2l35.6-67.2C14.3 220.2 0 183.6 0 144 0 46.8 86-32 192-32s192 78.8 192 176m0 368c-94.1 0-172.4-62.1-188.8-144 120-1.5 224.3-86.9 235.8-202.7 83.3 19.2 145 88.3 145 170.7 0 39.6-14.3 76.2-38.4 105.6l35.6 67.2c4.9 9.3 3.2 20.7-4.2 28.2s-18.9 9.2-28.2 4.2L459.2 498c-23.1 9-48.5 14-75.2 14"/></svg></span></a></p>
+</mark>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+  
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+        
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" hidden>
+        
+        
+          
+          <a href="blog/" class="md-footer__link md-footer__link--next" aria-label="Next: Blog">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Blog
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
           </a>
-        </li>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2025 <a href="https://nry2025.xyz">ZhiZu.io</a> – <a href="#__consent">Change cookie settings</a>
+
+    </div>
+  
+  
+</div>
       
-    </ul>
-  </div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站信息</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">3</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总浏览量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2025-07-10T15:02:51.073Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;2025 By 战神小猫</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 7.3.0</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.4.2</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"><script>window.typedJSFn = {
-  init: str => {
-    window.typed = new Typed('#subtitle', Object.assign({
-      strings: str,
-      startDelay: 300,
-      typeSpeed: 150,
-      loop: true,
-      backSpeed: 50,
-    }, null))
-  },
-  run: subtitleType => {
-    if (true) {
-      if (typeof Typed === 'function') {
-        subtitleType()
-      } else {
-        btf.getScript('https://cdn.jsdelivr.net/npm/typed.js/dist/typed.umd.min.js').then(subtitleType)
-      }
-    } else {
-      subtitleType()
-    }
-  },
-  processSubtitle: (content, extraContents = []) => {
-    if (true) {
-      const sub = ["小田微雨稻苗香，田畔清溪潏潏凉。","我是小猫，我热爱的不仅仅是边城。","用魔法守护爱与美好。","我15岁啦。"].slice()
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+      <div class="md-consent" data-md-component="consent" id="__consent" hidden>
+        <div class="md-consent__overlay"></div>
+        <aside class="md-consent__inner">
+          <form class="md-consent__form md-grid md-typeset" name="consent">
+            
 
-      if (extraContents.length > 0) {
-        sub.unshift(...extraContents)
-      }
 
-      if (typeof content === 'string') {
-        sub.unshift(content)
-      } else if (Array.isArray(content)) {
-        sub.unshift(...content)
-      }
+  
 
-      sub.length > 0 && typedJSFn.init(sub)
-    } else {
-      document.getElementById('subtitle').textContent = typeof content === 'string' ? content :
-        (Array.isArray(content) && content.length > 0 ? content[0] : '')
-    }
-  }
-}
-btf.addGlobalFn('pjaxSendOnce', () => { typed.destroy() }, 'typedDestroy')
-</script><script>function subtitleType () {
-  typedJSFn.processSubtitle(["小田微雨稻苗香，田畔清溪潏潏凉。","我是小猫，我热爱的不仅仅是边城。","用魔法守护爱与美好。","我15岁啦。"])
-}
-typedJSFn.run(subtitleType)</script></div><div class="aplayer no-destroy" data-id="7456425951" data-server="netease" data-type="playlist" data-fixed="true" data-autoplay="true" data-lrcType="-1"> </div><script defer="defer" id="fluttering_ribbon" mobile="true" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-fluttering-ribbon.min.js"></script><script id="click-heart" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/click-heart.min.js" async="async" mobile="true"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/metingjs/dist/Meting.min.js"></script><script>(() => {
-  const destroyAplayer = () => {
-    if (window.aplayers) {
-      for (let i = 0; i < window.aplayers.length; i++) {
-        if (!window.aplayers[i].options.fixed) {
-          window.aplayers[i].destroy()
-        }
-      }
-    }
-  }
 
-  const runMetingJS = () => {
-    typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
-  }
-
-  btf.addGlobalFn('pjaxSend', destroyAplayer, 'destroyAplayer')
-  btf.addGlobalFn('pjaxComplete', loadMeting, 'runMetingJS')
-})()</script><script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script><script>(() => {
-  const pjaxSelectors = ["meta[property=\"og:image\"]","meta[property=\"og:title\"]","meta[property=\"og:url\"]","meta[property=\"og:description\"]","link[rel=\"canonical\"]","head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
-
-  window.pjax = new Pjax({
-    elements: 'a:not([target="_blank"])',
-    selectors: pjaxSelectors,
-    cacheBust: false,
-    analytics: false,
-    scrollRestoration: false
-  })
-
-  const triggerPjaxFn = (val) => {
-    if (!val) return
-    Object.values(val).forEach(fn => fn())
-  }
-
-  document.addEventListener('pjax:send', () => {
-    // removeEventListener
-    btf.removeGlobalFnEvent('pjaxSendOnce')
-    btf.removeGlobalFnEvent('themeChange')
-
-    // reset readmode
-    const $bodyClassList = document.body.classList
-    if ($bodyClassList.contains('read-mode')) $bodyClassList.remove('read-mode')
-
-    triggerPjaxFn(window.globalFn.pjaxSend)
-  })
-
-  document.addEventListener('pjax:complete', () => {
-    btf.removeGlobalFnEvent('pjaxCompleteOnce')
-    document.querySelectorAll('script[data-pjax]').forEach(item => {
-      const newScript = document.createElement('script')
-      const content = item.text || item.textContent || item.innerHTML || ""
-      Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
-      newScript.appendChild(document.createTextNode(content))
-      item.parentNode.replaceChild(newScript, item)
-    })
-
-    triggerPjaxFn(window.globalFn.pjaxComplete)
-  })
-
-  document.addEventListener('pjax:error', e => {
-    if (e.request.status === 404) {
-      const usePjax = true
-      false
-        ? (usePjax ? pjax.loadUrl('/404.html') : window.location.href = '/404.html')
-        : window.location.href = e.request.responseURL
-    }
-  })
-})()</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div></body></html>
+<h4>Cookie consent</h4>
+<p>We use cookies to recognize your repeated visits and preferences, as well as to measure the effectiveness of our documentation and whether users find what they're searching for. With your consent, you're helping us to make our documentation better.</p>
+<input class="md-toggle" type="checkbox" id="__settings" >
+<div class="md-consent__settings">
+  <ul class="task-list">
+    
+    
+      
+    
+    
+      
+    
+    
+  </ul>
+</div>
+<div class="md-consent__controls">
+  
+    
+      <button class="md-button md-button--primary">Accept</button>
+    
+    
+    
+  
+    
+    
+    
+      <label class="md-button" for="__settings">Manage settings</label>
+    
+  
+</div>
+          </form>
+        </aside>
+      </div>
+      <script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout((function(){document.querySelector("[data-md-component=consent]").hidden=!1}),250);var form=document.forms.consent;for(var action of["submit","reset"])form.addEventListener(action,(function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map((function(e){return[e,!0]})))),location.hash="",location.reload()}))</script>
+    
+    
+      
+      <script id="__config" type="application/json">{"base": ".", "features": ["search.share", "navigation.footer", "content.code.copy"], "search": "assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>
